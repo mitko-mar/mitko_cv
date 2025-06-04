@@ -1,0 +1,191 @@
+/* Use this file to use your own styles*/
+
+/* Import declaration to use Google Fonts - check https://fonts.google.com/ for details */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Styles for the body */
+
+body {
+	font-family: Lato, Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif'Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #202030;
+	background-color: #D6F5B3;
+}
+
+/* Styles for custom classes in the document. (There are more, try to find them out!) */
+
+.resume-header {
+    background-color: rgb(28, 115, 166);
+}
+
+.resume-main {
+	background-color: #f6fcfe;
+}
+
+.resume-aside {
+	background-color: #f6fcfe;
+}
+
+/* Styles for lists in the document */
+
+.biography-details li::before, .skill-list li::before {
+	content: ">";
+	font-weight: 800;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+
+.biography-details li::before {
+	color: #98ff98;
+}
+
+.biography-details li, .skill-list li {
+	padding-left: 1em;
+}
+
+/* Styles for contact icons */
+
+.contact-icon {
+	height: 1em;
+	flex-basis: 1.4em;
+}
+/* Container centering and responsive padding */
+.resume-container {
+  max-width: 1300px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #8ee9f8;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+/* Header section layout */
+.resume-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #D2E2FE;
+  border-radius: 0.5rem;
+}
+
+/* Portrait image */
+.portrait-container img {
+  width: 1600px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Name and job title */
+.header-content h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.header-content h5 {
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+  color: #505060;
+}
+
+/* Section layout with a responsive grid */
+.resume-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1600px) {
+  .resume-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sections inside main */
+.biography-section {
+  margin-bottom: 2rem;
+}
+
+/* Align list spacing */
+.biography-details li,
+.skill-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Aside styling */
+.resume-aside {
+  background-color: #F8CAB8;
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+}
+
+/* Section titles */
+h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.3rem;
+}
+
+/* Contact icons layout */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-icon {
+  height: 1em;
+  flex-basis: 1.4em;
+}
+/* Contact section: vertical list with proper alignment */
+.contact-section {
+  margin-top: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 1.25em;
+  height: 1.25em;
+}
+.language-item {
+  margin-bottom: 1rem;
+}
+
+.language-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.language-bar {
+  height: 0.6rem;
+  background-color: #ddd;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.language-fill {
+  height: 100%;
+  background-color: #98FF98;
+  width: 0%; /* Set dynamically */
+  transition: width 0.7s ease;
+  border-radius: 0.3rem;
+}
